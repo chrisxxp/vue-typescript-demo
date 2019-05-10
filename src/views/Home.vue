@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="home_container">
+    <div ref="test" v-on:click="click()">
+    测试
+  </div>
+      <itemcontainer father-component="home"></itemcontainer>
+      
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import itemcontainer from '../components/itemcontainer.vue'
+import { Vue, Component, Prop } from 'vue-property-decorator'
 
 @Component({
   components: {
-    HelloWorld,
+    itemcontainer,
   },
 })
-export default class Home extends Vue {}
+
+export default class Home extends Vue {
+  click () {
+    let elet: any  = this.$refs.test
+    elet.style.color = "red"
+  }
+}
 </script>
+ 
