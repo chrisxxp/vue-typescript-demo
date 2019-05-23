@@ -15,7 +15,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 @Component({
   components: {
     itemcontainer,
-  },
+  }, 
 })
 
 export default class Home extends Vue {

@@ -11,7 +11,7 @@ export default new Router({
       component: App,
       children: [{
         path: '',
-            component: () => import('../views/home.vue')
+            component: () => import('../views/Home.vue')
         }, {
             path: '/item',
             component: () => import('../views/item.vue')
